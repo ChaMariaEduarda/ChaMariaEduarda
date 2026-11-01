@@ -17,12 +17,29 @@
 <meta name="twitter:card" content="summary_large_image">
 <title>Um convite especial</title>
 <style>body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600;1,700&family=Jost:wght@400;500;600&display=block">
+<style>html{background:#f7f1ec}html.fl body{opacity:0}body{transition:opacity .7s ease}</style>
+<script>
+/* espera as fontes carregarem antes de mostrar a página (no máximo 2s) */
+(function(){
+  var h=document.documentElement; h.classList.add("fl");
+  var done=function(){h.classList.remove("fl")}; setTimeout(done,2000);
+  if(document.fonts&&document.fonts.load){
+    Promise.all([
+      document.fonts.load('italic 600 1em "Cormorant Garamond"'),
+      document.fonts.load('600 1em "Cormorant Garamond"'),
+      document.fonts.load('400 1em "Jost"'),
+      document.fonts.load('600 1em "Jost"')
+    ]).then(done,done);
+  } else done();
+})();
+</script>
 </head>
 <body>
 <title>Chá da Maria Eduarda</title>
 <meta name="claude:viewport-fit-sides" content="cover">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600;1,700&family=Jost:wght@400;500;600&display=swap">
 <style>
 /* Layout: editorial one-page event site. Transparent nav → asymmetric hero (giant italic Bodoni name, meta row)
    → ivory and deep-plum bands with glass 3D-tilt cards → footer. A WebGL butterfly (lit, procedural wings)
